@@ -7,7 +7,7 @@
     <title>Test</title>
 </head>
 <body>
-    <form action="/" method="post">
+    <form action="/organizations" method="post">
         <label for="name">Add Company</label>
         <br>
         <input autofocus name="name" type="text" maxlength="255", autocomplete="off", spellcheck="false" placeholder="Company name">
@@ -21,7 +21,7 @@
     <ul id="testUl"></ul>
     <script>
         let listOfMessages = document.querySelector("#testUl");
-        fetch("/getCmpns")
+        fetch("/organizations")
         .then(response => response.json())
         .then(data => {
             data.forEach(element => {

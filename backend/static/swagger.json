@@ -24,7 +24,7 @@
             "description": "All endpoints related to the Calendar table"
         },
         {
-            "name": "Company",
+            "name": "Organizations",
             "description": "All endpoints related to the Company table"
         },
         {
@@ -37,12 +37,12 @@
         }
     ],
     "paths": {
-        "/getCmpns": {
+        "/organizations": {
             "get": {
                 "tags": [
-                    "Company"
+                    "Organizations"
                 ],
-                "summary": "Returns everything located in Company table",
+                "summary": "",
                 "responses": {
                     "200": {
                         "description": "There should be array of companies located in response",
@@ -66,14 +66,12 @@
                         }
                     }
                 }
-            }
-        },
-        "/": {
+            },
             "post": {
                 "tags": [
-                    "Company"
+                    "Organizations"
                 ],
-                "summary": "Adds new company to the database (Soon this path will be switched to /addCompany)",
+                "summary": "",
                 "requestBody": {
                     "content": {
                         "application/x-www-form-urlencoded": {
